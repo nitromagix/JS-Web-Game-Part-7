@@ -10,12 +10,10 @@ document.stop = 0;
 document.addEventListener('keydown', function (e) {
    if (e.key === 'Escape') {
       document.stop = 1;
-      console.log(document.stop);
    }
 })
 
 async function moveNpc() {
-   console.log(document.stop)
    if (!document.stop) {
       await npc.walkNorth(1400);
       await npc.walkEast(1200);
